@@ -1,0 +1,44 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "REST Backend",
+      "tasks": [
+        { "id": 1, "name": "Implement authentication", "done": false },
+        { "id": 2, "name": "Setup database", "done": true },
+        { "id": 3, "name": "Create API endpoints", "done": false },
+        { "id": 4, "name": "Optimize database queries", "done": false }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Frontend",
+      "tasks": [
+        { "id": 5, "name": "Design homepage", "done": false },
+        { "id": 6, "name": "Implement user profile", "done": false },
+        { "id": 7, "name": "Add responsive design", "done": false },
+        { "id": 8, "name": "Integrate with REST API", "done": false }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Android App",
+      "tasks": [
+        { "id": 9, "name": "Setup project", "done": true },
+        { "id": 10, "name": "Implement login screen", "done": false },
+        { "id": 11, "name": "Add push notifications", "done": false },
+        { "id": 12, "name": "Optimize app performance", "done": false }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "iOS App",
+      "tasks": [
+        { "id": 13, "name": "Push Notifications", "done": true },
+        { "id": 14, "name": "Apple Pay Support", "done": false },
+        { "id": 15, "name": "Implement dark mode", "done": false },
+        { "id": 16, "name": "Fix memory leaks", "done": false }
+      ]
+    }
+  ]
+}

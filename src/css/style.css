@@ -1,0 +1,279 @@
+/* ==================== */
+/* Global Styles */
+/* ==================== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==================== */
+/* Layout Styles */
+/* ==================== */
+#app-container {
+  display: flex;
+  gap: 20px;
+}
+
+#stats-widget, #tasks-widget {
+  border-radius: 4px;
+  padding: 15px;
+  max-width: 50%;
+  flex: 1;
+}
+
+#stats-widget div, #tasks-widget div {
+  padding-bottom: 18px;
+  transform: translateY(10px);
+  font-weight: normal !important;
+  font-size: 18.5px;
+}
+
+#tasks-widget div {
+  margin-left: 10px;
+}
+
+.project-name {
+  border-bottom: none;
+  transform: translateY(-3.2px) !important;
+  padding: 20px 0;
+  font-size: 18.5px !important;
+}
+
+/* ==================== */
+/* Table Styles */
+/* ==================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border: 1px solid #000;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+#stats-widget table tbody tr {
+  height: 56.7px;
+}
+
+#stats-widget table tbody tr th:nth-child(1),
+#stats-widget table tbody tr td:nth-child(1) {
+  font-weight: normal;
+  padding-left: 2.5%;
+  font-size: 18.5px;
+}
+
+#stats-widget table tbody tr td:nth-child(2) {
+  text-align: right;
+  padding-right: 7.95%;
+}
+
+#stats-widget table tbody tr th:nth-child(2) {
+  text-align: right;
+  padding-right: 9.2%;
+  font-weight: normal;
+  font-size: 18.5px;
+}
+
+#stats-widget table tbody tr:nth-child(1) {
+  border-color: #000;
+}
+
+#stats-widget table tbody tr:nth-child(n + 2) td {
+  line-height: 56.25px;
+}
+
+#tasks-widget table thead th, 
+#tasks-widget table tbody tr td, 
+#tasks-widget table tbody tr th {
+  border-bottom: none;
+  border-top: none;
+  transform: translateY(-8px);
+  font-size: 18.5px;
+}
+
+#tasks-widget table tbody tr td::first-line {
+  justify-self: center;
+  text-align: center;
+}
+
+/* ==================== */
+/* Task Item Styles */
+/* ==================== */
+.task-item {
+  display: flex;
+  align-items: center;
+  border-bottom: #000 1px solid;
+  padding: 10px 0;
+}
+
+.task-item:first-child {
+  border-top: #000 1px solid;
+}
+
+.task-item:last-child {
+  border-bottom: none;
+}
+
+#tasks-widget table tbody tr.task-item:nth-child(1) {
+  margin-top: -18px;
+}
+
+#tasks-widget {
+  margin-top: -0.35px;
+}
+
+/* ==================== */
+/* Checkbox Styles */
+/* ==================== */
+.task-item input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  margin-right: 17.5px;
+  margin-left: 8.5px;
+  transform: translateY(9.7px);
+}
+
+.task-item input[type="checkbox"]:checked::after {
+  content: "✔";
+  font-size: 18px;
+  color: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ==================== */
+/* Badge Styles */
+/* ==================== */
+.badge {
+  background-color: black;
+  color: white;
+  border-radius: 80px;
+  line-height: 35px !important;
+  font-size: 1.1em;
+  display: inline-block;
+  text-align: center;
+  min-width: 60px;
+  box-shadow: 0 0 0 5px white;
+}
+
+/* ==================== */
+/* Project Selector Styles */
+/* ==================== */
+.project-selector {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* ==================== */
+/* Dropdown Styles */
+/* ==================== */
+.project-dropdown {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 12.5px 0 15px 8.5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 250px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 15px;
+}
+
+.project-dropdown .dropdown-header {
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.project-dropdown .dropdown-list {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.project-dropdown .dropdown-item {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.project-dropdown .dropdown-item:hover {
+  text-decoration: underline;
+}
+
+/* ==================== */
+/* Responsive Styles */
+/* ==================== */
+@media (max-width: 768px) {
+  #app-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #stats-widget, #tasks-widget {
+    max-width: 100%;
+  }
+
+  .project-dropdown {
+    width: 200px;
+    padding: 10px;
+  }
+
+  .task-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-left: 5px;
+  }
+
+  .badge {
+    min-width: 50px;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  #stats-widget, #tasks-widget {
+    padding: 10px;
+  }
+
+  .project-dropdown {
+    width: 180px;
+    padding: 8px;
+  }
+
+  .task-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    margin-left: 4px;
+  }
+
+  .badge {
+    min-width: 40px;
+    font-size: 0.9em;
+  }
+}
